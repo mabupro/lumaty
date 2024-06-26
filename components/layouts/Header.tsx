@@ -8,11 +8,11 @@ const LalezarFont = Lalezar({
 
 export default function Header() {
     return (
-        <>
-            <div className="relative flex rounded-b-lg w-full shadow-md justify-between bg-white">
+        <div className="fixed top-0 left-0 w-full shadow-md rounded-b-lg bg-white z-50">
+            <div className="relative flex justify-between">
                 <div className="pt-4 pb-3 px-6 gap-3 flex">
-                    <img className=" h-10" src="/images/logo.png" alt="Logo" loading="lazy" />
-                    <div className="text-xl py-2">
+                    <img className="h-10" src="/images/logo.png" alt="Logo" loading="lazy" />
+                    <div className="text-xl py-2 text-[#333333]">
                         <p className={LalezarFont.className}>LUMATY</p>
                     </div>
                 </div>
@@ -20,6 +20,6 @@ export default function Header() {
                     <HumbergerButton />
                 </div>
             </div>
-        </>
+        </div>
     )
 }

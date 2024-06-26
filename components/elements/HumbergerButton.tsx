@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export default function HumbergerButton() {
-    const [isOpenMenu, setIsOpenMenu] = useState(false)
+    const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false)
 
     const handleMenu = () => {
         setIsOpenMenu(!isOpenMenu)
