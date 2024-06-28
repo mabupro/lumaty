@@ -23,14 +23,14 @@ export default function Shirakawa() {
                     <NewsButton type="notice" fulldate="2024.5.17" title="神輿" />
                 </div>
                 <div className="mt-12">
-                    <MainButton title="News一覧はコチラ" />
+                    <MainButton title="News一覧はコチラ" url="" />
                 </div>
             </div>
             <div className="bg-teal-500 py-12">
                 <Subtitle subtitle="アクセス" color="white" />
                 <img className="mx-auto mt-8 w-4/5 h-80 justify-center rounded-md bg-white" />
                 <div className="mt-12">
-                    <MainButton title="アクセスの詳細はコチラ" />
+                    <MainButton title="アクセスの詳細はコチラ" url="shirakawa/access" />
                 </div>
             </div>
             <div className="bg-white py-12">
