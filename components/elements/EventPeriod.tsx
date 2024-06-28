@@ -16,14 +16,14 @@ export default function EventPeriod({ festival, stDate, stDayOfWeek, endDate, en
                     <p className="pt-1 text-lg text-center font-semibold text-white">{festival}</p>
                 </div>
                 <div className="flex justify-center pt-7">
-                    <p className="text-5xl font-semibold tracking-wider text-white">{stDate}</p>
+                    <p className="text-4xl sm:text-5xl font-semibold tracking-wider text-white">{stDate}</p>
                     <p className="pt-5 text-lg font-semibold tracking-wider text-white">[{stDayOfWeek}]</p>
                     <p className="px-2 pt-2 text-2xl font-semibold tracking-wider text-white">-</p>
-                    <p className="text-5xl font-semibold tracking-wider text-white">{endDate}</p>
+                    <p className="text-4xl sm:text-5xl font-semibold tracking-wider text-white">{endDate}</p>
                     <p className="pt-5 text-lg font-semibold tracking-wider text-white">[{endDayOfWeek}]</p>
                 </div>
                 <div className="absolute right-4 bottom-2">
-                    <FiChevronRight size={40} color="#fff" />
+                    <FiChevronRight size={30} color="#fff" />
                 </div>
             </div>
         </>
