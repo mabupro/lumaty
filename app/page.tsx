@@ -7,6 +7,10 @@ export default function Home() {
         <Link href={"/shirakawa"}>
           <p className="font-bold text-2xl text-center my-auto">デモページへ行く⇒</p>
         </Link>
+        <br />
+        <Link href={"/map"}>
+          <p className="font-bold text-2xl text-center my-auto">マップページへ行く⇒</p>
+        </Link>
       </div>
 
     </>

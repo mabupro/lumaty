@@ -1,8 +1,9 @@
+import { FiChevronLeft } from "react-icons/fi";
+import Link from "next/link";
 import Header from "@/components/layouts/Header"
 import Subtitle from "@/components/elements/Subtitle"
 import MapMenuButton from "@/components/elements/MapMenuButton"
-import { FiChevronLeft } from "react-icons/fi";
-import Link from "next/link";
+import GoogleMap from "@/components/elements/GoogleMap";
 
 export default function Access() {
 
@@ -19,7 +20,7 @@ export default function Access() {
                 <Subtitle subtitle="アクセス" color="" />
             </div>
             <div className="mx-auto mt-8 w-80 h-80 justify-center rounded-md bg-slate-300">
-
+                <GoogleMap />
             </div>
             <div className="my-2 p-10 ">
                 <div className="grid grid-cols-3 gap-3">
