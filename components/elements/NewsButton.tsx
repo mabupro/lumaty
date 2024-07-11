@@ -1,7 +1,7 @@
 import { FiChevronRight } from "react-icons/fi";
 
 type Props = {
-    type: 'important' | 'notice';
+    type: '重要' | 'お知らせ';
     fulldate: string;
     title: string;
 };
@@ -11,8 +11,8 @@ export default function NewsButton({ type, fulldate, title }: Props) {
         <>
             <div className="cursor-pointer mx-16 mt-6">
                 <div className="flex gap-4">
-                    <div className={`${type === 'important' ? 'bg-red-400' : 'bg-amber-300'} w-28 rounded-sm`}>
-                        <p className="text-white font-semibold text-center">{type === 'important' ? '重要' : 'お知らせ'}</p>
+                    <div className={`${type === '重要' ? 'bg-red-400' : 'bg-amber-300'} w-28 rounded-sm`}>
+                        <p className="text-white font-semibold text-center">{type === '重要' ? '重要' : 'お知らせ'}</p>
                     </div>
                     <p className="font-bold tracking-wider text-gray-400">{fulldate}</p>
                 </div>

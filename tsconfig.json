@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "components/elements/Map.tsx"
-  ],
+, "utils/getSheetData.js", "app/shirakawa/page.tsx"  ],
   "exclude": ["node_modules"]
 }
