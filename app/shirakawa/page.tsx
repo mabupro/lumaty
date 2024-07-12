@@ -62,7 +62,7 @@ const Shirakawa = async () => {
                     ))}
                 </div>
                 <div className="mt-12">
-                    <MainButton title="News一覧はコチラ" url="" />
+                    <MainButton title="News一覧はコチラ" url="shirakawa/news" />
                 </div>
             </div>
             <div className="bg-teal-500 py-12">
