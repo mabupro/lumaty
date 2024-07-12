@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { getSheetsData } from "@/utils/getSheetData";
+// import { getSheetsData } from "@/utils/getSheetData";
 
 export default async function Home() {
 
-  const data = await getSheetsData()
-  console.log("data: ", data)
+  // const data = await getSheetsData()
+  // console.log("data: ", data)
 
   return (
     <>

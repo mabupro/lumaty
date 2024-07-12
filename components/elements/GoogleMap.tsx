@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 // 初期化用の定数
 const INITIALIZE_LAT = 35.68238  // 緯度
 const INITIALIZE_LNG = 139.76556 // 経度
-const INITIALIZE_ZOOM = 15
+const INITIALIZE_ZOOM = 14
 
 const INITIALIZE_MAP_WIDTH = '100%'
 const INITIALIZE_MAP_HEIGHT = '20rem'

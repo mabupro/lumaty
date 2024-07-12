@@ -14,6 +14,12 @@ interface NewsData {
     [key: number]: string;
 }
 
+// const formatDriveUrl = (url: string) => {
+//     const fileIdMatch = url.match(/(?<=id=)[-\w]{25,}/);
+//     console.log(fileIdMatch ? `https://drive.google.com/uc?export=view&id=${fileIdMatch[0]}` : url)
+//     return fileIdMatch ? `https://drive.google.com/uc?export=view&id=${fileIdMatch[0]}` : url;
+// };
+
 const Shirakawa = async () => {
     const data = await getSheetsData();
     const eventData = data[0];
@@ -25,6 +31,7 @@ const Shirakawa = async () => {
             <div className="bg-teal-500 pt-20">
                 <img
                     className="mx-auto mt-8 w-4/5 h-80 justify-center rounded-lg bg-white"
+                    // src={eventData[1] ? formatDriveUrl(eventData[1][3]) : ''}
                     src={eventData[1] ? eventData[1][3] : ''}
                     alt="Festival Image"
                 />

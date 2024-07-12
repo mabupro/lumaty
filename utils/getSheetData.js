@@ -1,15 +1,15 @@
 import { google } from "googleapis";
 
-// 日付を "MM.DD" フォーマットに変換する関数
+// 日付を "MM.DD" フォーマットに変換する関数 (手動でパース)
 const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    const month = date.getUTCMonth() + 1; // 月は0から始まるため+1
-    const day = date.getUTCDate();
+    const [year, month, day] = dateString.split('/').map(Number);
     return `${month}.${day}`;
 }
 
+// 曜日を取得する関数 (手動でパース)
 const getDayOfWeek = (dateString) => {
-    const date = new Date(dateString);
+    const [year, month, day] = dateString.split('/').map(Number);
+    const date = new Date(Date.UTC(year, month - 1, day)); // UTCで作成
     const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     return daysOfWeek[date.getUTCDay()];
 }
@@ -21,12 +21,12 @@ export const getSheetsData = async () => {
             private_key: process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, "\n")
         },
         scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"]
-    })
+    });
 
-    const sheets = google.sheets({ version: "v4", auth: await auth.getClient() })
+    const sheets = google.sheets({ version: "v4", auth: await auth.getClient() });
 
     // 各シートの範囲を指定
-    const ranges = ["Sheet1!B:E", "Sheet2!B:E"]
+    const ranges = ["Sheet1!B:E", "Sheet2!B:E"];
 
     try {
         // 各シートからデータを取得
@@ -35,7 +35,7 @@ export const getSheetsData = async () => {
                 spreadsheetId: process.env.GOOGLE_SHEET_ID,
                 range
             }))
-        )
+        );
 
         // 取得したデータに曜日情報を追加
         const allData = responses.map((response, sheetIndex) => {

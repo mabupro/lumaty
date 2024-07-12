@@ -21,17 +21,15 @@ export default function Access() {
             </div>
             <div className="mx-auto mt-8 w-80 h-80 justify-center rounded-md bg-slate-300">
                 <GoogleMap />
-                {/* <ReactGoogleMap /> */}
             </div>
             <div className="my-2 p-10 ">
                 <div className="grid grid-cols-3 gap-3">
                     <MapMenuButton menuTitle="駐車場" />
                     <MapMenuButton menuTitle="トイレ" />
+                    <MapMenuButton menuTitle="避難場所" />
                     <MapMenuButton menuTitle="駐車場" />
                     <MapMenuButton menuTitle="駐車場" />
                     <MapMenuButton menuTitle="駐車場" />
-                    <MapMenuButton menuTitle="駐車場" />
-
                 </div>
             </div>
         </>
