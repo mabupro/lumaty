@@ -52,7 +52,7 @@ const Shirakawa = async () => {
             <div className="bg-white py-12">
                 <Subtitle subtitle="NEWS" color="black" />
                 <div className="mt-12">
-                    {newsData.slice(1).map((news, index) => (
+                    {newsData.slice(1, 4).map((news, index) => (
                         <NewsButton
                             key={index}
                             type={news[0]}

@@ -1,10 +1,24 @@
+import { getSheetsData } from "@/utils/getSheetData";
 import { FiChevronLeft } from "react-icons/fi";
 import Link from "next/link";
 import Header from "@/components/layouts/Header"
 import Subtitle from "@/components/elements/Subtitle"
-import MapMenuButton from "@/components/elements/MapMenuButton"
+import NewsButton from "@/components/elements/NewsButton";
 
-export default function News() {
+// データの型定義
+interface EventData {
+    [key: number]: string;
+}
+
+interface NewsData {
+    [key: number]: string;
+}
+
+export default async function News() {
+
+    const data = await getSheetsData();
+    const eventData = data[0];
+    const newsData = data[1];
 
     return (
         <>
@@ -18,6 +32,16 @@ export default function News() {
             <div className="">
                 <Subtitle subtitle="NEWS" color="" />
             </div>
+            <div className="mt-12">
+                    {newsData.slice(1).map((news, index) => (
+                        <NewsButton
+                            key={index}
+                            type={news[0]}
+                            fulldate={news[1]}
+                            title={news[2]}
+                        />
+                    ))}
+                </div>
         </>
     )
 }
