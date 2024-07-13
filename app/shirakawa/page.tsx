@@ -46,6 +46,7 @@ const Shirakawa = async () => {
                             stDayOfWeek={event[4]}
                             endDate={event[2]}
                             endDayOfWeek={event[5]}
+                            index={index + 1}
                         />
                     ))}
                 </div>

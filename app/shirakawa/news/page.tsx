@@ -3,7 +3,7 @@ import { FiChevronLeft } from "react-icons/fi";
 import Link from "next/link";
 import Header from "@/components/layouts/Header"
 import Subtitle from "@/components/elements/Subtitle"
-import NewsButton from "@/components/elements/NewsButton";
+import NewsButton from "@/components/elements/NewsButton"
 
 // データの型定義
 interface NewsData {

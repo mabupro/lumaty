@@ -1,14 +1,14 @@
-import Link from "next/link";
-import { FiChevronRight } from "react-icons/fi";
+import Link from "next/link"
+import { FiChevronRight } from "react-icons/fi"
 
 type Props = {
-    type: '重要' | 'お知らせ';
-    fulldate: string;
-    title: string;
-    index: number;
+    type: '重要' | 'お知らせ'
+    fulldate: string
+    title: string
+    index: number
 };
 
-export default function NewsButton({ type, fulldate, title,index }: Props) {
+export default function NewsButton({ type, fulldate, title, index }: Props) {
     return (
         <>
             <Link href={`/shirakawa/news/${index}`}>
