@@ -4,6 +4,7 @@ import Subtitle from "@/components/elements/Subtitle";
 import EventPeriod from "@/components/elements/EventPeriod";
 import NewsButton from "@/components/elements/NewsButton";
 import MainButton from "@/components/elements/MainButton";
+import GoogleMap from "@/components/elements/GoogleMap";
 
 // データの型定義
 interface EventData {
@@ -32,7 +33,7 @@ const Shirakawa = async () => {
                 <img
                     className="mx-auto mt-8 w-4/5 h-80 justify-center rounded-lg bg-white"
                     // src={eventData[1] ? formatDriveUrl(eventData[1][3]) : ''}
-                    src={eventData[1] ? eventData[1][3] : ''}
+                    // src={eventData[1] ? eventData[1][3] : ''}
                     alt="Festival Image"
                 />
                 <div className="mt-8 pb-3">
@@ -68,7 +69,9 @@ const Shirakawa = async () => {
             </div>
             <div className="bg-teal-500 py-12">
                 <Subtitle subtitle="アクセス" color="white" />
-                <img className="mx-auto mt-8 w-4/5 h-80 justify-center rounded-md bg-white" />
+                <div className="mx-auto mt-8 w-80 h-80 justify-center rounded-md bg-slate-300">
+                    <GoogleMap />
+                </div>
                 <div className="mt-12">
                     <MainButton title="アクセスの詳細はコチラ" url="shirakawa/access" />
                 </div>

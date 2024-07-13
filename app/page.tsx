@@ -12,9 +12,6 @@ export default async function Home() {
         <Link href={"/shirakawa"}>
           <p className="font-bold p-5 text-2xl text-center my-auto">デモページへ行く⇒</p>
         </Link>
-        <Link href={"/map"}>
-          <p className="font-bold p-5 text-2xl text-center my-auto">マップページへ行く⇒</p>
-        </Link>
         <Link href={"/form"}>
           <p className="font-bold p-5 text-2xl text-center my-auto">フォームページへ行く⇒</p>
         </Link>
