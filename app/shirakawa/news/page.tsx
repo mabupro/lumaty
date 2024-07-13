@@ -6,10 +6,6 @@ import Subtitle from "@/components/elements/Subtitle"
 import NewsButton from "@/components/elements/NewsButton";
 
 // データの型定義
-interface EventData {
-    [key: number]: string;
-}
-
 interface NewsData {
     [key: number]: string;
 }
@@ -17,7 +13,6 @@ interface NewsData {
 export default async function News() {
 
     const data = await getSheetsData();
-    const eventData = data[0];
     const newsData = data[1];
 
     return (
@@ -32,13 +27,14 @@ export default async function News() {
             <div className="">
                 <Subtitle subtitle="NEWS" color="" />
             </div>
-            <div className="mt-12">
+            <div className="mt-12"> 
                     {newsData.slice(1).map((news, index) => (
                         <NewsButton
                             key={index}
                             type={news[0]}
                             fulldate={news[1]}
                             title={news[2]}
+                            index={index + 1}
                         />
                     ))}
                 </div>

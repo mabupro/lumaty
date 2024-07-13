@@ -58,6 +58,7 @@ const Shirakawa = async () => {
                             type={news[0]}
                             fulldate={news[1]}
                             title={news[2]}
+                            index={index + 1}
                         />
                     ))}
                 </div>
