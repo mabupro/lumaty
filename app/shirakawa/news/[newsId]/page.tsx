@@ -5,9 +5,10 @@ export default function Page({ params }: { params: { newsId: number } }) {
     return (
         <>
             <Header title="Demo: Shirakawa Festival" />
+            {/* TODO: Propsか何かで可変 */}
             <div className="mt-32">
                 <Subtitle subtitle="あああ" color="" />
-            </div>         
+            </div>  
         </>
     )
 }
