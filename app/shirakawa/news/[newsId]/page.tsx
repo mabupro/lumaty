@@ -3,7 +3,6 @@ import { getSheetsData } from "@/utils/getSheetData"
 import { FiChevronLeft } from "react-icons/fi";
 import Header from "@/components/layouts/Header"
 import Subtitle from "@/components/elements/Subtitle"
-import NewsButton from "@/components/elements/NewsButton";
 
 export default async function Page({ params }: { params: { newsId: string } }) {
 
