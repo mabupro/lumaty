@@ -1,30 +1,30 @@
-import { getSheetsData } from "@/utils/getSheetData";
-import Header from "@/components/layouts/Header";
-import Subtitle from "@/components/elements/Subtitle";
-import EventPeriod from "@/components/elements/EventPeriod";
-import NewsButton from "@/components/elements/NewsButton";
-import MainButton from "@/components/elements/MainButton";
-import GoogleMap from "@/components/elements/GoogleMap";
+import { getSheetsData } from "@/utils/getSheetData"
+import Header from "@/components/layouts/Header"
+import Subtitle from "@/components/elements/Subtitle"
+import EventPeriod from "@/components/elements/EventPeriod"
+import NewsButton from "@/components/elements/NewsButton"
+import MainButton from "@/components/elements/MainButton"
+import GoogleMap from "@/components/elements/GoogleMap"
 
 // データの型定義
 interface EventData {
-    [key: number]: string;
+    [key: number]: string
 }
 
 interface NewsData {
-    [key: number]: string;
+    [key: number]: string
 }
 
 // const formatDriveUrl = (url: string) => {
-//     const fileIdMatch = url.match(/(?<=id=)[-\w]{25,}/);
+//     const fileIdMatch = url.match(/(?<=id=)[-\w]{25,}/)
 //     console.log(fileIdMatch ? `https://drive.google.com/uc?export=view&id=${fileIdMatch[0]}` : url)
-//     return fileIdMatch ? `https://drive.google.com/uc?export=view&id=${fileIdMatch[0]}` : url;
-// };
+//     return fileIdMatch ? `https://drive.google.com/uc?export=view&id=${fileIdMatch[0]}` : url
+// }
 
-const Shirakawa = async () => {
-    const data = await getSheetsData();
-    const eventData = data[0];
-    const newsData = data[1];
+export default async function Shirakawa(){
+    const data = await getSheetsData()
+    const eventData = data[0]
+    const newsData = data[1]
 
     return (
         <>
@@ -71,7 +71,7 @@ const Shirakawa = async () => {
             <div className="bg-teal-500 py-12">
                 <Subtitle subtitle="アクセス" color="white" />
                 <div className="mx-auto mt-8 w-80 h-80 justify-center rounded-md bg-slate-300">
-                    <GoogleMap />
+                    {/* <GoogleMap /> */}
                 </div>
                 <div className="mt-12">
                     <MainButton title="アクセスの詳細はコチラ" url="shirakawa/access" />
@@ -81,15 +81,14 @@ const Shirakawa = async () => {
                 <Subtitle subtitle="白川まつりについて" color="" />
                 <div className="cursor-pointer">
                     <img className="mx-auto mt-8 w-4/5 h-48 justify-center rounded-md bg-slate-300" />
-                    <p className="text-xl font-semibold text-center pr-36 mt-3">白川まつりの歴史</p>
+                    <p className="text-xl font-semibold text-center pr-36 mt-3 text-gray-700">白川まつりの歴史</p>
                 </div>
                 <div className="cursor-pointer">
                     <img className="mx-auto mt-8 w-4/5 h-48 justify-center rounded-md bg-slate-300" />
-                    <p className="text-xl font-semibold text-center pr-36 mt-3">白川まつりの概要</p>
+                    <p className="text-xl font-semibold text-center pr-36 mt-3 text-gray-700">白川まつりの概要</p>
                 </div>
             </div>
         </>
-    );
-};
+    )
+}
 
-export default Shirakawa;

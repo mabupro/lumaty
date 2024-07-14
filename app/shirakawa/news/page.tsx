@@ -25,7 +25,7 @@ export default async function News() {
                 </Link>
             </div>
             <div className="">
-                <Subtitle subtitle="NEWS" color="" />
+                <Subtitle subtitle="NEWS一覧" color="" />
             </div>
             <div className="mt-12"> 
                     {newsData.slice(1).map((news, index) => (

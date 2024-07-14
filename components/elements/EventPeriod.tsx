@@ -14,6 +14,10 @@ export default function EventPeriod({ festival, stDate, stDayOfWeek, endDate, en
     return (
         <>
             <Link href={`/shirakawa/venue/${index}`}>
+                {/* <Link href={{
+                pathname: `/shirakawa/venue/${index}`,
+                query: { festival, stDate, stDayOfWeek, endDate, endDayOfWeek, index }
+            }}> */}
                 <div className="relative border-2 border-slate-200 mx-auto my-12 w-5/6 h-32 justify-center rounded-lg bg-teal-500 cursor-pointer transition hover:opacity-60">
                     <div className="w-40 h-10 mx-auto -my-5 bg-teal-500">
                         <p className="pt-1 text-lg text-center font-semibold text-white">{festival}</p>
@@ -30,7 +34,6 @@ export default function EventPeriod({ festival, stDate, stDayOfWeek, endDate, en
                     </div>
                 </div>
             </Link>
-
         </>
     )
 }

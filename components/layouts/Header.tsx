@@ -16,7 +16,7 @@ export default function Header({title}: Props) {
             <div className="relative flex justify-between">
                 <div className="pt-4 pb-3 px-6 gap-3 flex">
                     <img className="h-10" src="/images/logo.png" alt="Logo" loading="lazy" />
-                    <div className="text-xl py-2 text-[#333333]">
+                    <div className="text-xl py-2 text-gray-700">
                         <p className={LalezarFont.className}>{title}</p>
                     </div>
                 </div>

@@ -7,8 +7,8 @@ export default function Subtitle({ subtitle, color }: Props) {
 
     return (
         <>
-            <div className={color==="white" ? " text-white" : " text-[#333333]"}>
-                <h2 className="text-2xl font-bold text-center">{subtitle}</h2>
+            <div className={color === "white" ? " text-white" : " text-gray-700"}>
+                <h2 className="text-2xl font-bold text-center ">{subtitle}</h2>
             </div>
         </>
     )
