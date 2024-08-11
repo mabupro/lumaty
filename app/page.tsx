@@ -9,15 +9,13 @@ export default async function Home() {
   return (
     <>
       <div className="h-screen">
-        <Link href={"/shirakawa"}>
+        <Link href={"/Suito"}>
           <p className="font-bold p-5 text-2xl text-center my-auto">デモページへ行く⇒</p>
         </Link>
         <Link href={"/form"}>
           <p className="font-bold p-5 text-2xl text-center my-auto">フォームページへ行く⇒</p>
         </Link>
       </div>
-
-
     </>
   );
 }

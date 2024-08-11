@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Demo: Shirakawa Festival",
-  description: "白川まつりについて情報提供アプリです。",
+  title: "Demo: Suito Festival",
+  description: "まつりについて情報提供アプリです。",
 };
 
 export default function RootLayout({
