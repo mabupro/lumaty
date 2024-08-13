@@ -16,11 +16,12 @@ export default function RootLayout({
 }>) {
   const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY;
   return (
-    <html lang="en">
+    <html lang="ja">
       <head>
         {googleMapsApiKey && (
           <script
             async
+            defer
             src={`https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}&libraries=places`}
           />
         )}
