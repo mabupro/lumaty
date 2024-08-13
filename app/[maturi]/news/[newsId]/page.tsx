@@ -16,7 +16,7 @@ export default async function Page({ params }: { params: { newsId: string } }) {
         <>
             <Header title="Demo: Suito Festival" />
             <div className="pt-28 px-5">
-                <Link href={"/maturi/news"} className="flex">
+                <Link href={"/[maturi]/news"} className="flex">
                     <FiChevronLeft size={30} color="#666" />
                     <p className="text-lg font-semibold text-[#666]">戻る</p>
                 </Link>

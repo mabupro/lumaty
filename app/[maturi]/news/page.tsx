@@ -19,7 +19,7 @@ export default async function News() {
         <>
             <Header title="Demo: Suito Festival" />
             <div className="pt-28 px-5">
-                <Link href={"/maturi"} className="flex">
+                <Link href={"/[maturi]"} className="flex">
                     <FiChevronLeft size={30} color="#666" />
                     <p className="text-lg font-semibold text-[#666]">戻る</p>
                 </Link>

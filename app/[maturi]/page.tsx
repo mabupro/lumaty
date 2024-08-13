@@ -18,9 +18,9 @@ interface NewsData {
 const formatDriveUrl = (url: string) => {
     if (!url) return
 
+    // https://zenn.dev/collabostyle/articles/2060bfc3fd68be 解決方法
     const fileIdMatch = url.match(/(?<=id=)[-\w]{25,}/)
-    console.log(fileIdMatch ? `https://drive.google.com/uc?export=view&id=${fileIdMatch[0]}` : url)
-    return fileIdMatch ? `https://drive.google.com/uc?export=view&id=${fileIdMatch[0]}` : url
+    return fileIdMatch ? `https://lh3.googleusercontent.com/d/${fileIdMatch[0]}` : url
 }
 
 export default async function Maturi({ params }: { params: { maturi: string } }) {
@@ -28,13 +28,15 @@ export default async function Maturi({ params }: { params: { maturi: string } })
     const eventData = data[0]
     const newsData = data[1]
 
+    {/* TODO: データが存在する時だけ表示したい */ }
     if (params.maturi === "Suito") {
         return (
             <>
+                {/* TODO: Header名を動的にしたい */}
                 <Header title="Demo: Suito Festival" />
                 <div className="bg-teal-500 pt-20">
                     <img
-                        className="mx-auto mt-8 w-4/5 h-80 justify-center rounded-lg bg-white"
+                        className="mx-auto mt-8 w-4/5 h-72 justify-center rounded-2xl bg-white"
                         src={eventData[1] ? formatDriveUrl(eventData[1][3]) : ''}
                         // src={eventData[1] ? eventData[1][3] : ''}
                         alt="Festival Image"
@@ -68,7 +70,8 @@ export default async function Maturi({ params }: { params: { maturi: string } })
                         ))}
                     </div>
                     <div className="mt-12">
-                        <MainButton title="News一覧はコチラ" url="maturi/news" />
+                        {/* TODO: urlを動的にしたい */}
+                        <MainButton title="News一覧はコチラ" url="Suito/news" />
                     </div>
                 </div>
                 <div className="bg-teal-500 py-12">
@@ -77,18 +80,22 @@ export default async function Maturi({ params }: { params: { maturi: string } })
                         {/* <GoogleMap /> */}
                     </div>
                     <div className="mt-12">
-                        <MainButton title="アクセスの詳細はコチラ" url="maturi/access" />
+                        {/* TODO: urlを動的にしたい */}
+                        <MainButton title="アクセスの詳細はコチラ" url="Suito/access" />
                     </div>
                 </div>
                 <div className="bg-white py-12">
                     <Subtitle subtitle="まつりについて" color="" />
+                    {/* TODO: 必要かどうかや、名前も動的にしたい */}
+
                     <div className="cursor-pointer">
                         <img className="mx-auto mt-8 w-4/5 h-48 justify-center rounded-md bg-slate-300" />
-                        <p className="text-xl font-semibold text-center pr-36 mt-3 text-gray-700">白川まつりの歴史</p>
+                        <p className="text-xl font-semibold text-center pr-36 mt-3 text-gray-700">水都まつりの歴史</p>
                     </div>
+                    {/* TODO: 必要かどうかや、名前も動的にしたい */}
                     <div className="cursor-pointer">
                         <img className="mx-auto mt-8 w-4/5 h-48 justify-center rounded-md bg-slate-300" />
-                        <p className="text-xl font-semibold text-center pr-36 mt-3 text-gray-700">白川まつりの概要</p>
+                        <p className="text-xl font-semibold text-center pr-36 mt-3 text-gray-700">水都まつりの概要</p>
                     </div>
                 </div>
             </>

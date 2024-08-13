@@ -11,7 +11,8 @@ export default function Access() {
         <>
             <Header title="Demo: Suito Festival" />
             <div className="pt-28 px-5">
-                <Link href={"/maturi"} className="flex">
+                {/* TODO: urlを動的にしたい */}
+                <Link href={"/Suito"} className="flex">
                     <FiChevronLeft size={30} color="#666" />
                     <p className="text-lg font-semibold text-[#666]">戻る</p>
                 </Link>
@@ -24,12 +25,12 @@ export default function Access() {
             </div>
             <div className="my-2 p-10 ">
                 <div className="grid grid-cols-3 gap-3">
-                    <MapMenuButton menuTitle="駐車場" />
+                    {/* <MapMenuButton menuTitle="駐車場" />
                     <MapMenuButton menuTitle="トイレ" />
                     <MapMenuButton menuTitle="避難場所" />
                     <MapMenuButton menuTitle="駐車場" />
                     <MapMenuButton menuTitle="駐車場" />
-                    <MapMenuButton menuTitle="駐車場" />
+                    <MapMenuButton menuTitle="駐車場" /> */}
                 </div>
             </div>
         </>

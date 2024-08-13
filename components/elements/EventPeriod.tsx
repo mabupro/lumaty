@@ -14,7 +14,7 @@ export default function EventPeriod({ festival, stDate, stDayOfWeek, endDate, en
 
     const getFontSizeClass = (text: string | null ) => {
         if(!text) return 
-        
+
         if (text.length <= 8) {
             return 'text-lg'
         } else if (text.length <= 12) {
@@ -26,7 +26,7 @@ export default function EventPeriod({ festival, stDate, stDayOfWeek, endDate, en
 
     return (
         <>
-            <Link href={`/shirakawa/venue/${index}`}>
+            <Link href={`/Suito/venue/${index}`}>
                 <div className="relative border-2 border-slate-200 mx-auto my-12 w-5/6 h-32 justify-center rounded-lg bg-teal-500 cursor-pointer transition hover:opacity-60">
                     <div className="w-60 h-10 mx-auto -my-5 bg-teal-500">
                         <p className={`pt-1 text-center font-semibold text-white ${getFontSizeClass(festival)}`}>
@@ -45,7 +45,6 @@ export default function EventPeriod({ festival, stDate, stDayOfWeek, endDate, en
                     </div>
                 </div>
             </Link>
-
         </>
     )
 }
