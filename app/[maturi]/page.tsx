@@ -37,7 +37,7 @@ export default async function Maturi({ params }: { params: { maturi: string } })
                 <div className="bg-teal-500 pt-20">
                     <Image
                         className="mx-auto mt-8 w-4/5 h-72 justify-center rounded-2xl bg-white"
-                        src={eventData[1] ? formatDriveUrl(eventData[1][3]) : '/default-image-path.jpg'} // Provide a default image path
+                        src={eventData[1] ? formatDriveUrl(eventData[1][3]) : ''} // Provide a default image path
                         alt="Festival Image"
                         width={400}
                         height={200}
