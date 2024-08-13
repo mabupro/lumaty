@@ -6,7 +6,15 @@ import Subtitle from "@/components/elements/Subtitle"
 
 export default async function Page({ params }: { params: { newsId: string } }) {
 
-    const data = await getSheetsData()
+    let data
+    try {
+        data = await getSheetsData()
+    } catch (error) {
+        console.error('Failed to fetch sheets data:', error)
+        // エラーハンドリング
+        return <div>Error loading data. Please try again later.</div>
+    }
+
     const newsData = data[1]
 
     // URLのパラーメータを使用できるように変換
@@ -35,7 +43,7 @@ export default async function Page({ params }: { params: { newsId: string } }) {
                     </div>
                     <hr className="my-4 h-1 bg-slate-300 mx-auto rounded" />
                     <p className="text-sm text-gray-700">{newsData[newsId][3]}</p>
-                </div>             
+                </div>
             }
         </>
     )
