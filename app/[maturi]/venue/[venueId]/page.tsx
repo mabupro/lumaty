@@ -34,8 +34,8 @@ export default async function Page({ params }: { params: { venueId: string } }) 
 
             </div>
             <div className="mt-10 mx-10">
-                {eventDetailData.map((eventDetail) => (
-                    <p>{eventDetail}</p>
+                {eventDetailData.map((eventDetail, index) => (
+                    <p key={index}>{eventDetail}</p>
                 ))}
             </div>
         </>
