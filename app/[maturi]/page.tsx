@@ -4,7 +4,7 @@ import Subtitle from "@/components/elements/Subtitle"
 import EventPeriod from "@/components/elements/EventPeriod"
 import NewsButton from "@/components/elements/NewsButton"
 import MainButton from "@/components/elements/MainButton"
-import GoogleMap from "@/components/elements/GoogleMap"
+// import GoogleMap from "@/components/elements/GoogleMap"
 import Image from "next/image"
 
 // データの型定義
@@ -24,7 +24,14 @@ const formatDriveUrl = (url: string) => {
 }
 
 export default async function Maturi({ params }: { params: { maturi: string } }) {
-    const data = await getSheetsData()
+    let data
+    try {
+        data = await getSheetsData()
+    } catch (error) {
+        console.error('Failed to fetch sheets data:', error)
+        // エラーハンドリング
+        return <div>Error loading data. Please try again later.</div>
+    }
     const eventData = data[0]
     const newsData = data[1]
 

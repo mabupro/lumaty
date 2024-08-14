@@ -5,7 +5,14 @@ import Header from "@/components/layouts/Header"
 import Subtitle from "@/components/elements/Subtitle"
 
 export default async function Page({ params }: { params: { venueId: string } }) {
-    const data = await getSheetsData()
+    let data
+    try {
+        data = await getSheetsData()
+    } catch (error) {
+        console.error('Failed to fetch sheets data:', error)
+        // エラーハンドリング
+        return <div>Error loading data. Please try again later.</div>
+    }
     const eventData = data[0]
     const eventDetailData = [
         "本町一帯 ライトアップ装飾",
