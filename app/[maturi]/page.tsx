@@ -96,12 +96,12 @@ export default async function Maturi({ params }: { params: { maturi: string } })
                     <Subtitle subtitle="まつりについて" color="" />
                     {/* TODO: 必要かどうかや、名前も動的にしたい */}
                     <div className="cursor-pointer">
-                        <Image className="mx-auto mt-8 w-4/5 h-48 justify-center rounded-md bg-slate-300" alt="祭りの歴史" src="/path-to-image.jpg" width={640} height={360} />
+                        <Image className="mx-auto mt-8 w-4/5 h-48 justify-center rounded-md bg-slate-300" alt="祭りの歴史" src="/images/640x360.png" width={640} height={360} />
                         <p className="text-xl font-semibold text-center pr-36 mt-3 text-gray-700">水都まつりの歴史</p>
                     </div>
                     {/* TODO: 必要かどうかや、名前も動的にしたい */}
                     <div className="cursor-pointer">
-                        <Image className="mx-auto mt-8 w-4/5 h-48 justify-center rounded-md bg-slate-300" alt="祭りの概要" src="/path-to-image.jpg" width={640} height={360} />
+                        <Image className="mx-auto mt-8 w-4/5 h-48 justify-center rounded-md bg-slate-300" alt="祭りの概要" src="/images/640x360.png" width={640} height={360} />
                         <p className="text-xl font-semibold text-center pr-36 mt-3 text-gray-700">水都まつりの概要</p>
                     </div>
                 </div>
